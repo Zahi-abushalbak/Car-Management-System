@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue_6" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbae8598-eefd-432b-942b-e44751443b08">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dnQuY2FyIEFTICwxOTIsMjEsZjI3YTk0NTUtNmUzMy00YWRkLTkyN2QtMWRiYjIyNDAzYTEyO3Z0
+LmZ1ZWxlZGNhcnMgQVMgLDQxNywxMzAsMGJlZGU4YjMtNDdhZS00YmM4LThkZTAtZGVkNDY4M2I1
+NTY1Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vt.fueledcars.fueltype,
+	vt.car.platenumber,
+	vt.car.brand
+FROM vt.car
+	INNER JOIN vt.fueledcars ON 
+	 vt.fueledcars.platenumber = vt.car.platenumber]]>
+	</queryString>
+	<field name="fueltype" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fueltype"/>
+		<property name="com.jaspersoft.studio.field.label" value="fueltype"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fueledcars"/>
+	</field>
+	<field name="platenumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="platenumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="platenumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="car"/>
+	</field>
+	<field name="brand" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="brand"/>
+		<property name="com.jaspersoft.studio.field.label" value="brand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="car"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{platenumber}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="200" height="32" forecolor="#000203" backcolor="rgba(230, 230, 230, 0.0)" uuid="71173795-a57a-4080-bdb7-820cbc8a6448"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{platenumber}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="32947ef6-eee7-455b-8467-e2035a71028e"/>
+				</line>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="210" y="6" width="90" height="20" uuid="b727ae75-c932-40bd-9a56-fe07794676d3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6e4d7da-d061-4edc-b69e-70232c3d2af1"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fueltype}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="350" y="6" width="60" height="20" uuid="402b0853-3bb7-4c0c-89fa-8c2b97456e0a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="075921b3-63a8-45ce-abba-651061f92e66"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="32" width="555" height="1" uuid="7c99f0fd-c04a-47af-a1eb-0786eef98a5d"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#453F3D" uuid="4c8b5df4-9b0a-4017-8e8d-820ed2991b5b"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="4520691e-62c1-4971-bd88-faac674e7cfb"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fueled Cars]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="1cb01550-4a23-4579-ba0a-df676cfb3ffc"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="197" y="1" width="80" height="20" forecolor="#000203" backcolor="rgba(230, 230, 230, 0.0)" uuid="f7c829c1-b9c0-40ff-9fb7-61ecb08286c7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6e4d7da-d061-4edc-b69e-70232c3d2af1"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fueltype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="339" y="1" width="55" height="20" forecolor="#030303" backcolor="rgba(230, 230, 230, 0.0)" uuid="741716fc-0c44-4642-b004-2cd3ae1e29ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="075921b3-63a8-45ce-abba-651061f92e66"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-10" y="0" width="100" height="20" forecolor="#030000" backcolor="rgba(230, 230, 230, 0.0)" uuid="9d41397d-248d-49c7-b3ec-3accd206e6c0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[platenumber]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20"/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" forecolor="#FFFFFF" backcolor="#453F3D" uuid="7fcd1b5e-9435-422b-a419-51569c07273b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" forecolor="#FFFFFF" backcolor="#453F3D" uuid="1ba39e6d-8951-4075-87d2-fdbbb86cfc11"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" forecolor="#FFFFFF" backcolor="rgba(255, 255, 255, 0.0)" uuid="58a847e1-ff5e-4668-8402-7527aa4a4cb6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

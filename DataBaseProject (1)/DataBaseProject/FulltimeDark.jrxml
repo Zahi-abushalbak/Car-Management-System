@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="33e9906d-9744-404c-972c-1af2ee587930">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dnQuZW1wbG95ZWUgQVMgLDE3MCwxNSw0NTY4ZDFhOC1hOTU4LTRkYjMtOTc0Ny0wYWMzNWQ0N2Vm
+ZTI7dnQuZnVsbHRpbWVlbXBsb3llZSBBUyAsMTMsNzEsY2Y1ZTEwMzUtZmQxZS00MmU1LWE3MDQt
+NTczZmRkZDQzZmM5Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vt.fulltimeemployee.salary,
+	vt.employee.fname
+FROM vt.employee
+	INNER JOIN vt.fulltimeemployee ON 
+	 vt.fulltimeemployee.essn = vt.employee.ssn]]>
+	</queryString>
+	<field name="salary" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fulltimeemployee"/>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{fname}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="10" y="0" width="120" height="32" forecolor="#2A2727" backcolor="rgba(230, 230, 230, 0.0)" uuid="3c88ad28-a8cb-4af6-967a-07ea1f17f344"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="60bb2a70-dccf-4627-bd81-85a7d2bf053b"/>
+				</line>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="250" y="0" width="70" height="20" forecolor="#2A2727" uuid="7e374064-abad-4d8c-ab08-0533f81ba727">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd36ee6e-27e6-4cb4-8717-b67330caa780"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#453F3D" uuid="ec20471d-e8c2-4c2f-a8a2-a7ebad8ca2ba"/>
+				<staticText>
+					<reportElement x="20" y="20" width="150" height="43" forecolor="#FFFFFF" uuid="a1592249-ac6d-4073-946d-318e1ff0edc6"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Full Time]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="85081696-b104-4038-a43e-f65d66e09c9e"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="240" y="1" width="70" height="20" forecolor="#030000" backcolor="rgba(42, 39, 39, 0.0)" uuid="199697c4-bde3-4784-bbbf-19aa66e4ca3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd36ee6e-27e6-4cb4-8717-b67330caa780"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-10" y="1" width="100" height="20" forecolor="#030000" backcolor="rgba(230, 230, 230, 0.0)" uuid="0d4d29c9-d818-49ae-9662-77480e841dc4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fname]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="1" uuid="08d4d23a-87e8-4e0a-bde1-3c7dc732cb22"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" forecolor="#FFFFFF" backcolor="#453F3D" uuid="3a3f4960-4ea8-4a19-97e9-ca0d333ba8c3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" forecolor="#FFFFFF" backcolor="#453F3D" uuid="83b3006c-7477-4e13-bd72-063180d9b3fa"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" forecolor="#FFFFFF" uuid="7d3630ef-09bb-43ad-8072-f0f0a1683e36"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
