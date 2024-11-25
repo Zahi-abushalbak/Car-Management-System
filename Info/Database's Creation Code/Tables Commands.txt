@@ -1,0 +1,165 @@
+-- real tables(not relation ship tables or multivalue attribute table)
+
+create table vt.employee(
+	FName varchar(15),
+	MName varchar(15),
+	LName varchar(15),
+	SSN varchar(10) NOT NULL,
+	PhoneNumber varchar(10) Unique,
+	Birthdate date,
+	Gender varchar(10),
+	Address varchar(50),
+	Primary Key(SSN)
+);
+
+create table vt.car(
+	Brand varchar(15) NOT NULL,
+	Color varchar(10) NOT NULL,
+	PlateNumber varchar(10) NOT NULL,
+	StateOfCar varchar(15) NOT NULL, -- state is like: available/inuse/UnAvailable
+	ClearenceDate date NOT NULL,
+	MaintenanceCoName varchar(15), -- Foreign Key-
+	MaintenanceDate date ,
+	InsuranceCoName varchar(15), -- Foreign Key
+	InsuranceDate date ,
+	Primary Key(PlateNumber)
+);
+
+
+create table vt.GasStation(
+	G_Name varchar(10) NOT NULL,
+	PhoneNumber varchar(10) unique NOT NULL,
+	Price decimal(5,2) default 10 NOT NULL, --the price is constant so lets assume its 10 units of some currency
+	Primary Key(G_Name)
+);
+
+create table vt.MaintenanceCompany(
+	M_Name varchar(10) NOT NULL,
+	PhoneNumber varchar(10) unique NOT NULL,
+	Price decimal(5,2) NOT NULL,
+	Primary Key(M_Name)
+);
+
+
+create table vt.TaxiBereau(
+	T_Name varchar(10) NOT NULL,
+	PhoneNumber varchar(10) unique NOT NULL,
+	Address varchar(20) NOT NULL,
+	Price decimal(5,2) NOT NULL,
+	Primary Key(T_Name)
+);
+
+create table vt.insuranceCompany(
+	Price decimal(5,2) NOT NULL,
+	Address varchar(20) NOT NULL,
+	I_Name varchar(20) NOT NULL,
+	PhoneNumber varchar(10) unique NOT NULL,
+	Primary Key(I_Name)
+);
+
+
+-- tables of two multivalued attributes and other stuff like relations and Specialization
+create table vt.MaintenanceLocations(
+	M_Name varchar(10) NOT NULL,
+	Physical_Location varchar(20) NOT NULL,
+	Primary Key(M_Name,Physical_Location),
+	Foreign Key (M_Name) references vt.maintenancecompany(M_Name) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.GasStationLocations(
+	G_Name varchar(10) Not NULL,
+	Physical_Location varchar(20) NOT NULL,
+	Primary Key(G_Name,Physical_Location),
+	Foreign Key (G_Name) references vt.gasstation(G_Name) On delete CASCADE ON UPDATE CASCADE
+);
+
+
+create table vt.Staff(
+	ESSN varchar(10) NOT NULL,
+	Major varchar(25) NOT NULL,
+	Primary Key(ESSN,Major),
+	Foreign Key (ESSN) References vt.employee(SSN) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.Manager(
+	ESSN varchar(10) NOT NULL,
+	OfficeNumber varchar(10) NOT NULL,
+	startDate date NOT NULL,
+	Primary Key(ESSN,OfficeNumber),
+	Foreign Key (ESSN) References vt.employee(SSN) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.FullTimeEmployee(
+	ESSN varchar(10) NOT NULL,
+	Salary decimal(10,2) NOT NULL,
+	Primary Key(ESSN,Salary),
+	Foreign Key (ESSN) References vt.employee(SSN) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.PartTimeEmployee(
+	ESSN varchar(10) NOT NULL,
+	HoursWorked int NOT NULL,
+	WagePerHour decimal(10,2) NOT NULL Default 0,
+	Primary Key(ESSN,HoursWorked),
+	Foreign Key (ESSN) References vt.employee(SSN) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.fueledcars(
+	PlateNumber varchar(10) NOT NULL,
+	FuelType varchar(10) NOT NULL,
+	Primary Key(PlateNumber,FuelType),
+	Foreign Key (PlateNumber) References vt.car(PlateNumber) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.Electriccars(
+	PlateNumber varchar(10) NOT NULL,
+	Capacity int NOT NULL,
+	Primary Key(PlateNumber,Capacity),
+	Foreign Key (PlateNumber) References vt.car(PlateNumber) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.Drives(
+	ERow_No Serial Primary Key,
+	PlateNumber varchar(10) NOT NULL,
+	ESSN varchar(10) NOT NULL,
+	Foreign Key (PlateNumber) References vt.Car(PlateNumber) On delete CASCADE ON UPDATE CASCADE,
+	Foreign Key (ESSN) References vt.employee(SSN) On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.Calls(
+	TRow_No Serial Primary Key,
+	T_Name varchar(10) NOT NULL,
+	ESSN varchar(10) NOT NULL,
+	Foreign Key (T_Name) References vt.taxibereau(T_Name) On delete CASCADE ON UPDATE CASCADE,
+	Foreign Key (ESSN) References vt.employee(SSN)On delete CASCADE ON UPDATE CASCADE
+);
+
+create table vt.Supplies(
+	GRow_No Serial Primary Key,
+	G_Name varchar(10) NOT NULL,
+	PlateNumber varchar(10) NOT NULL,
+	Foreign Key (G_Name) References vt.gasstation(G_Name) On delete CASCADE ON UPDATE CASCADE,
+	Foreign Key (PlateNumber) References vt.car(PlateNumber) On delete CASCADE ON UPDATE CASCADE
+);
+
+
+alter table vt.car
+add constraint fk_const1
+Foreign Key (MaintenanceCoName) References vt.maintenancecompany(M_Name)
+ON DELETE SET NULL ON UPDATE CASCADE;
+
+
+alter table vt.car
+add constraint fk_const2
+Foreign Key (InsuranceCoName) References vt.insurancecompany(I_Name)
+ON DELETE SET NULL ON UPDATE CASCADE;
+
+alter table vt.supplies
+add column Coupon varchar(10);
+
+Create table vt.Userpassword
+(
+    Username varchar(30),
+    passcode varchar(30)
+);
+
