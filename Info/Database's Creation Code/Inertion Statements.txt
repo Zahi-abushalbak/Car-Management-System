@@ -1,0 +1,333 @@
+--employee inserts
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Mohammad', 'Sameh', 'Kareem', '1234567890', '5551234567', '1990-05-15', 'Male', 'Rafidia St');
+
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Sara', 'Abdulkareem', 'Saleem', '9876543210', '5559876543', '1985-08-20', 'Female', 'Amman St');
+
+
+INSERT INTO vt.employee  (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Hala', 'Saeed', 'Kamel', '5678901234', '5551112233', '1995-02-10', 'Female', 'Sufian St');
+
+
+INSERT INTO vt.employee  (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Robert', 'Downey', 'Junior', '3456789012', NULL, '1980-11-30', 'Male', 'NYC Manhattan');
+
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Suaad', 'Ramez', 'Abdulrazzaq', '2345678901', '5553334444', '1998-07-05', 'Female', 'Gaza St');
+ 
+
+
+--Maintenance Company inserts
+
+INSERT INTO vt.maintenancecompany (M_Name, PhoneNumber, Price)
+VALUES ('NumberOne', '12345890', 150.00);
+
+INSERT INTO vt.maintenancecompany (M_Name, PhoneNumber, Price)
+VALUES ('TopService', '98765210', 200.00);
+
+INSERT INTO vt.maintenancecompany  (M_Name, PhoneNumber, Price)
+VALUES ('SpeedFix', '55511233', 180.00);
+
+INSERT INTO vt.maintenancecompany  (M_Name, PhoneNumber, Price)
+VALUES ('QuickFix', '55544555', 170.00);
+
+INSERT INTO vt.maintenancecompany (M_Name, PhoneNumber, Price)
+VALUES ('RapidS', '77788899', 160.00);
+
+-- Insurance Company
+
+INSERT INTO vt.insurancecompany (Price, Address, I_Name, PhoneNumber)
+VALUES ( 100.00, 'Faisal St', 'Al Mashreq', '022958090');
+
+INSERT INTO vt.insurancecompany ( Price, Address, I_Name, PhoneNumber)
+VALUES ( 150.00, '456 Oak St', 'SecureGuard', '9876543210');
+
+INSERT INTO vt.insurancecompany( Price, Address, I_Name, PhoneNumber)
+VALUES ( 120.00, '789 Maple', 'Shield', '5551112233');
+
+INSERT INTO vt.insurancecompany ( Price, Address, I_Name, PhoneNumber)
+VALUES ( 130.00, '101 Pine St', 'SafeCoverage', '5554445555');
+
+INSERT INTO vt.insurancecompany ( Price, Address, I_Name, PhoneNumber)
+VALUES ( 110.00, '202 Cedar Rd', 'Guardian', '7778889999');
+
+-- car inserts
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Toyota', 'Blue', 'ABC123', 'Available', '2018-01-01', 'NumberOne', '2022-01-05', 'Al Mashreq', '2024-01-01');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Skoda', 'Red', 'XYZ789', 'UnAvailable', '2019-12-01', 'NumberOne', '2022-02-15', 'Al Mashreq', '2024-03-01');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Kia', 'white', 'DEF456', 'UnAvailable', '2020-02-01', 'NumberOne', '2022-02-05', 'Al Mashreq', '2024-02-27');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Hyundai', 'Black', 'GHI789', 'Available', '2021-07-08', 'NumberOne', '2022-01-28', 'Al Mashreq', '2024-09-17');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Seat', 'Silver', 'JKL012', 'UnAvailable', '2017-03-01', 'NumberOne', '2022-03-05', 'Al Mashreq', '2024-04-30');
+
+-- Gas Stations
+
+INSERT INTO vt.gasstation (G_Name, PhoneNumber, Price)
+VALUES ('AlHuda', '1234567890', 6.5);
+
+INSERT INTO vt.gasstation(G_Name, PhoneNumber, Price)
+VALUES ('AlTamimi', '9876543210', 15.00);
+
+INSERT INTO vt.gasstation (G_Name, PhoneNumber, Price)
+VALUES ('Shakaa', '5551112233', 12.50);
+
+INSERT INTO vt.gasstation (G_Name, PhoneNumber, Price)
+VALUES ('AlMaseer', '5554445555', 14.00);
+
+INSERT INTO vt.gasstation (G_Name, PhoneNumber, Price)
+VALUES ('Kanaan', '7778889999', 11.50);
+
+-- Taxi Bereaus
+
+INSERT INTO vt.taxibereau (T_Name, PhoneNumber, Address, Price)
+VALUES ('Etimad', '1700100200', 'Nablus ', 15.00);
+
+INSERT INTO vt.taxibereau (T_Name, PhoneNumber, Address, Price)
+VALUES ('Almadinah', '092377777', 'Nablus ', 25.00);
+
+INSERT INTO vt.taxibereau (T_Name, PhoneNumber, Address, Price)
+VALUES ('AlNajah', '0599280832', 'Nablus ', 20.00);
+
+INSERT INTO vt.taxibereau (T_Name, PhoneNumber, Address, Price)
+VALUES ('AlSalam', '092382010', 'Al-Adl St', 25.00);
+
+INSERT INTO vt.taxibereau (T_Name, PhoneNumber, Address, Price)
+VALUES ('Jawwal', '092343880', 'Fakhfakhina St', 30.00);
+
+-- MaintenanceLocations
+
+INSERT INTO vt.MaintenanceLocations (M_Name, Physical_Location)
+VALUES ('NumberOne', 'Ramallah');
+
+INSERT INTO vt.MaintenanceLocations (M_Name, Physical_Location)
+VALUES ('NumberOne', 'Nablus');
+
+INSERT INTO vt.MaintenanceLocations (M_Name, Physical_Location)
+VALUES ('SpeedFix', '789 Mechanic');
+
+INSERT INTO vt.MaintenanceLocations (M_Name, Physical_Location)
+VALUES ('QuickFix', '101 Auto');
+
+INSERT INTO vt.MaintenanceLocations (M_Name, Physical_Location)
+VALUES ('RapidS', '202 Fix St');
+
+
+-- GasStationLocations
+
+INSERT INTO vt.GasStationLocations (G_Name, Physical_Location)
+VALUES ('AlHuda', 'Zawata');
+
+INSERT INTO vt.GasStationLocations (G_Name, Physical_Location)
+VALUES ('Shakaa', 'DownTown');
+
+INSERT INTO vt.GasStationLocations (G_Name, Physical_Location)
+VALUES ('AlHuda', 'Ramallah');
+
+INSERT INTO vt.GasStationLocations (G_Name, Physical_Location)
+VALUES ('AlHuda', 'Jenin');
+
+INSERT INTO vt.GasStationLocations (G_Name, Physical_Location)
+VALUES ('AlTamimi', 'bietWazan St');
+
+-- Staff
+
+INSERT INTO vt.Staff(ESSN, Major)
+VALUES ('1234567890', 'Computer Science');
+
+INSERT INTO vt.Staff (ESSN, Major)
+VALUES ('9876543210', 'Computer Eng');
+
+INSERT INTO vt.Staff (ESSN, Major)
+VALUES ('5678901234', 'CyberSicurity');
+
+INSERT INTO vt.Staff (ESSN, Major)
+VALUES ('3456789012', 'Electrical Eng');
+
+INSERT INTO vt.Staff (ESSN, Major)
+VALUES ('2345678901', 'Physics');
+
+-- Manager, its not sense to have lots of managers for few data but I followed the instructions.
+
+INSERT INTO vt.Manager (ESSN, OfficeNumber, startDate)
+VALUES ('1234567890', 'Office101', '2022-01-01');
+
+INSERT INTO vt.Manager (ESSN, OfficeNumber, startDate)
+VALUES ('9876543210', 'Office202', '2021-12-15');
+
+INSERT INTO vt.Manager (ESSN, OfficeNumber, startDate)
+VALUES ('5678901234', 'Office303', '2023-02-01');
+
+INSERT INTO vt.Manager (ESSN, OfficeNumber, startDate)
+VALUES ('3456789012', 'Office404', '2023-03-01');
+
+INSERT INTO vt.Manager (ESSN, OfficeNumber, startDate)
+VALUES ('2345678901', 'Office505', '2022-11-01');
+
+-- FullTimeEmployees
+
+INSERT INTO vt.FullTimeEmployee (ESSN, Salary)
+VALUES ('1234567890', 5000.00);
+
+INSERT INTO vt.FullTimeEmployee (ESSN, Salary)
+VALUES ('9876543210', 6000.00);
+
+INSERT INTO vt.FullTimeEmployee (ESSN, Salary)
+VALUES ('5678901234', 5500.00);
+
+INSERT INTO vt.FullTimeEmployee (ESSN, Salary)
+VALUES ('3456789012', 6500.00);
+
+INSERT INTO vt.FullTimeEmployee (ESSN, Salary)
+VALUES ('2345678901', 7000.00);
+
+
+-- First we needed another 5 employees to fill the part time employees, so I created Those:
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Fred', 'Michael', 'Watson', '1112223334', '5551744567', '1990-05-15', 'Male', '123 Main St');
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Jane', 'Smach', 'Smith', '5556667778', '5559885543', '1985-08-20', 'Female', '456 Oak St');
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Roben', 'Suna', 'Johnson', '9991010101', '5551142233', '1995-02-10', 'Female', '789 Maple Ave');
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Barney', 'Jimmy', 'Stinson', '1122334455', '5599878526', '1980-11-30', 'Male', '101 Pine St');
+
+INSERT INTO vt.employee (FName, MName, LName, SSN, PhoneNumber, Birthdate, Gender, Address)
+VALUES ('Ted', 'J', 'Mosby', '1221344367', '5547934444', '1998-07-05', 'Female', '202 Cedar Rd');
+
+-- now PartTimeEmployees
+
+INSERT INTO vt.PartTimeEmployee(ESSN, HoursWorked, WagePerHour)
+VALUES ('1112223334', 22, 14.50);
+
+INSERT INTO vt.PartTimeEmployee( ESSN, HoursWorked, WagePerHour)
+VALUES ('5556667778', 18, 11.25);
+
+INSERT INTO vt.PartTimeEmployee (ESSN, HoursWorked, WagePerHour)
+VALUES ('9991010101', 25, 16.00);
+
+INSERT INTO vt.PartTimeEmployee (ESSN, HoursWorked, WagePerHour)
+VALUES ('1122334455', 20, 13.00);
+
+INSERT INTO vt.PartTimeEmployee (ESSN, HoursWorked, WagePerHour)
+VALUES ('1221344367', 28, 15.75);
+
+-- Fuel Type:
+INSERT INTO vt.fueledcars (PlateNumber, FuelType)
+VALUES ('ABC123', 'Gasoline');
+
+INSERT INTO vt.fueledcars(PlateNumber, FuelType)
+VALUES ('XYZ789', 'Deisel');
+
+INSERT INTO vt.fueledcars (PlateNumber, FuelType)
+VALUES ('DEF456', 'Diesel');
+
+INSERT INTO vt.fueledcars (PlateNumber, FuelType)
+VALUES ('GHI789', 'Deisel');
+
+INSERT INTO vt.fueledcars (PlateNumber, FuelType)
+VALUES ('JKL012', 'Gasoline');
+
+
+-- for the electric car I had to insert more cars to my database to give you at least 5 tuples
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Toyota', 'Blue', '34679H', 'Available', '2023-01-15', 'NumberOne', '2023-01-20', 'Al Mashreq', '2023-01-25');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Honda', 'Red', '26485N', 'UnAvailable', '2023-02-10', 'TopService', '2023-02-15', 'Al Mashreq', '2023-02-20');
+
+INSERT INTO vt.car(Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Ford', 'Green', 'N75469', 'Available', '2023-03-05', 'SpeedFix', '2023-03-10', 'Al Mashreq', '2023-03-15');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Chevrolet', 'Yellow', '41578L', 'UnAvailable', '2023-04-20', 'QuickFix', '2023-04-25', 'Al Mashreq', '2023-05-01');
+
+INSERT INTO vt.car (Brand, Color, PlateNumber, StateOfCar, ClearenceDate, MaintenanceCoName, MaintenanceDate, InsuranceCoName, InsuranceDate)
+VALUES ('Nissan', 'Black', '72036K', 'Available', '2023-05-10', 'NumberOne', '2023-05-15', 'Al Mashreq', '2023-05-20');
+
+-- now for the electric cars
+
+INSERT INTO vt.Electriccars (PlateNumber, Capacity)
+VALUES ('34679H', 60);
+
+INSERT INTO vt.Electriccars (PlateNumber, Capacity)
+VALUES ('26485N', 75);
+
+INSERT INTO vt.Electriccars (PlateNumber, Capacity)
+VALUES ('N75469', 80);
+
+INSERT INTO vt.Electriccars (PlateNumber, Capacity)
+VALUES ('41578L', 70);
+
+INSERT INTO vt.Electriccars (PlateNumber, Capacity)
+VALUES ('72036K', 65);
+
+-- Drives
+
+INSERT INTO vt.drives (PlateNumber, ESSN)
+VALUES ('ABC123', '1234567890');
+
+INSERT INTO vt.drives  (PlateNumber, ESSN)
+VALUES ('N75469', '9876543210');
+
+INSERT INTO vt.drives  (PlateNumber, ESSN)
+VALUES ('DEF456', '1234567890');
+
+INSERT INTO vt.drives  (PlateNumber, ESSN)
+VALUES ('GHI789', '3456789012');
+
+INSERT INTO vt.drives  (PlateNumber, ESSN)
+VALUES ('JKL012', '2345678901');
+
+-- Calls
+
+
+INSERT INTO vt.Calls (T_Name, ESSN)
+VALUES ('Etimad', '1234567890');
+
+INSERT INTO vt.Calls (T_Name, ESSN)
+VALUES ('AlNajah', '9876543210');
+
+INSERT INTO vt.Calls (T_Name, ESSN)
+VALUES ('Etimad', '9876543210');
+
+INSERT INTO vt.Calls (T_Name, ESSN)
+VALUES ('Etimad', '3456789012');
+
+INSERT INTO vt.Calls (T_Name, ESSN)
+VALUES ('Almadinah', '1234567890');
+
+-- Supplies
+
+INSERT INTO vt.Supplies (G_Name, PlateNumber,Coupon)
+VALUES ('AlHuda', 'ABC123','GTHYUJK');
+
+INSERT INTO vt.Supplies (G_Name, PlateNumber,Coupon)
+VALUES ('AlHuda', 'XYZ789','HECXLKH');
+
+INSERT INTO vt.Supplies (G_Name, PlateNumber,Coupon)
+VALUES ('AlMaseer', 'DEF456','ZDQEWRTG');
+
+INSERT INTO vt.Supplies (G_Name, PlateNumber,Coupon)
+VALUES ('Shakaa', 'GHI789','PJLN9MK');
+
+INSERT INTO vt.Supplies (G_Name, PlateNumber,Coupon)
+VALUES ('AlHuda', 'JKL012','CPLMHIG');
+
+Insert into vt.userpassword values ('Admin','Admin');
