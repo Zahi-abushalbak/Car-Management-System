@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue_1" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd9591a9-eff4-4745-a670-2e0f9f7229fd">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dnQucGFydHRpbWVlbXBsb3llZSBBUyAsMTUsOTMsMGY0ZGUxOGUtMDhjOC00NzVjLTkwNjAtNGMw
+YjJjYmI5YjA4O3Z0LmVtcGxveWVlIEFTICwxODUsMTUsNTUxODkxYzktMzY1Yi00YmVlLTg1ZDIt
+YTMzZDg5OWMwYzE4Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vt.parttimeemployee.wageperhour,
+	vt.parttimeemployee.hoursworked,
+	vt.employee.fname
+FROM vt.employee
+	INNER JOIN vt.parttimeemployee ON 
+	 vt.parttimeemployee.essn = vt.employee.ssn]]>
+	</queryString>
+	<field name="wageperhour" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="wageperhour"/>
+		<property name="com.jaspersoft.studio.field.label" value="wageperhour"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="parttimeemployee"/>
+	</field>
+	<field name="hoursworked" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="hoursworked"/>
+		<property name="com.jaspersoft.studio.field.label" value="hoursworked"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="parttimeemployee"/>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{fname}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="130" height="32" forecolor="#030303" backcolor="rgba(230, 230, 230, 0.0)" uuid="a18cd7ea-261e-48a8-9d29-9bc168b866b6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="1f24f94d-06de-4072-81d8-d93fd12970b7"/>
+				</line>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="222" y="6" width="110" height="20" uuid="302dae21-4c85-48b1-9f79-775b6503b606">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd08741f-6d0c-41dc-a329-5a08f9e4e587"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wageperhour}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="375" y="6" width="108" height="20" uuid="dd3da7ec-0a1c-400c-8c5f-12a3624f90b3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="15b187da-341b-4b77-9687-f44b28c34367"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hoursworked}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#4F709C" uuid="643eef20-b6d4-4b0c-944c-20e499de4eef"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="4a883100-3f98-4bc7-929d-14b17f819673"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Part Time]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="7998db14-5cf9-49b8-b9a0-f42d0d9edcab"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="1" width="107" height="20" forecolor="#030303" backcolor="rgba(230, 230, 230, 0.0)" uuid="6ec2e920-51e8-4ec3-94e6-43aaf9ee357e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd08741f-6d0c-41dc-a329-5a08f9e4e587"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[wageperhour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="332" y="1" width="113" height="20" forecolor="#000203" backcolor="rgba(230, 230, 230, 0.0)" uuid="6424b71c-25cd-4235-9f66-6de452256542">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="15b187da-341b-4b77-9687-f44b28c34367"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[hoursworked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-30" y="1" width="100" height="20" forecolor="#030303" backcolor="rgba(3, 3, 3, 0.0)" uuid="84f2ad40-93c8-4ebf-b873-25fbca10f518"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fname]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="99b3d6a8-d13e-4b17-bc63-9c709242f80e"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" forecolor="#FFFFFF" backcolor="#4F709C" uuid="65ef8865-2608-4f06-93ee-3bb54fdabaaf"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" forecolor="#FFFFFF" backcolor="#4F709C" uuid="0981a00e-1a8d-402f-8a26-3aada6fc0127"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" forecolor="#FFFFFF" uuid="e061e694-1712-482d-9615-1e0c04a2ca45"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
